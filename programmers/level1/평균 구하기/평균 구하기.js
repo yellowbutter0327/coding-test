@@ -1,8 +1,20 @@
 function solution(arr) {
-  let a = 0;
-  for (i = 0; i < arr.length; i++) {
-    a += arr[i];
+  let firstNum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    firstNum += arr[i];
   }
-  let b = a / arr.length;
-  return b;
+  let average = firstNum / arr.length;
+  return average;
+}
+
+function solution(arr) {
+  let result = 0;
+  arr.forEach((a) => {
+    return (result += a);
+  });
+  return result / arr.length;
+}
+
+function average(array) {
+  return array.reduce((a, b) => a + b) / array.length;
 }
